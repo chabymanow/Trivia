@@ -41,7 +41,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def getData(self):  
         currURL = self.api_url + self.currentCat
-        response = requests.get(currURL, headers={'X-Api-Key': 'ttO9t2CJIJf3dtlKVczFYg==wlqR80GWbGw77aoe'})
+        response = requests.get(currURL, headers={'X-Api-Key': 'GET_YOUR_API_KEY'})
         data = response.json()
         if response.status_code == requests.codes.ok:
             self.questionLabel.setText(data[0]["question"])
